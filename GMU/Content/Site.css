@@ -1,0 +1,147 @@
+﻿html, body {
+    height: 88%;
+    padding-top: 25px;
+}
+
+/* Override the default bootstrap behavior where horizontal description lists 
+   will truncate terms that are too long to fit in the left column 
+*/
+.dl-horizontal dt {
+    white-space: normal;
+}
+
+/* Set width on the form input elements since they're 100% wide by default */
+input,
+select,
+textarea {
+    max-width: 280px;
+}
+
+#header {
+    background-color: #FFCD2E;
+    font-size: 1.2em;
+    font-weight: bold;
+    border: white;
+    padding-left: 3%;
+    padding-right: 3%;
+}
+
+    #header a {
+        color: grey;
+    }
+
+        #header a:hover {
+            color: #076943;
+        }
+
+#logo {
+    max-height: 40px;
+    width: auto;
+}
+
+#btnApply {
+    background-color: #076943;
+}
+
+    #btnApply a {
+        color: #FFCD2E;
+    }
+
+        #btnApply a:hover {
+            color: white;
+        }
+
+#wrap {
+    min-height: 100%;
+}
+
+/*********************************************/
+
+#main {
+    padding-bottom: 75px;
+}
+
+.pageTitle {
+    font-size: 3em;
+    margin-left: 15%;
+}
+
+.subBody1 {
+    padding-left: 5%;
+    padding-right: 5%;
+}
+
+#fairfaxMain {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 75%;
+}
+
+.introPics {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    max-height: 300px;
+    max-width: 300px;
+}
+
+#homeBody {
+    font-size: 14px;
+}
+
+#aboutBody {
+    font-size: 16px;
+    margin: 3% 15% 0 15%;
+}
+
+#contactBody {
+    font-size: 16px;
+    padding-left: 17.5%;
+    padding-top: 3%;
+}
+
+    #contactBody h4 {
+        font-weight: bold;
+    }
+
+.greened {
+    background-color: #076943;
+}
+
+/*********************************************/
+
+#footer {
+    background-color: black;
+    position: relative;
+    clear: both;
+    padding-top: 10px;
+}
+
+#footerLogo {
+    max-height: 120px;
+    width: auto;
+}
+
+.blacked {
+    background-color: black;
+}
+
+footer hr {
+    border: 1px solid white;
+    width: 85%;
+}
+
+#footer p, #footer a {
+    margin: 0;
+    color: white;
+    font-weight: bold;
+}
+
+#footer a {
+    font-size: 1.1em;
+}
+
+    #footer a:hover {
+        color: green;
+    }

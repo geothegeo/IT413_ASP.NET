@@ -1,0 +1,67 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - George Mason</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+</head>
+<body>
+    <div id="wrap">
+        <div id="header" class="navbar navbar-inverse navbar-fixed-top">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a href='@Url.Action("Index", "Home" ,new { area = "AreaName" })'>
+                        <img src="~/Content/masonLogo2.png" id="logo" />
+                    </a>
+                </div>
+                <div class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav">
+                        <li>@Html.ActionLink("Home", "Index", "Home")</li>
+                        <li>@Html.ActionLink("About", "About", "Home")</li>
+                        <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
+                        <li id="btnApply">@Html.ActionLink("Apply", "Index", "Students/Create")</li>
+                    </ul>
+                    @Html.Partial("_LoginPartial")
+                </div>
+            </div>
+        </div>
+        <div id="main" class="container-fliud body-content">
+            @RenderBody()
+        </div>
+    </div>
+    <div id="footer">
+        <footer class="container-fluid blacked">
+            <div class="col-sm-6 col-xs-0 text-center blacked">
+                <img src="~/Content/masonLogo1.png" id="footerLogo" />
+            </div>
+            <div class="col-sm-6 col-xs-12 text-center blacked">
+                <br /><br />
+                <p>4400 University Drive, Fairfax, Virginia 22030</p>
+                <p>Call: +1 (703) 993-1000</p>
+                <p>&copy; @DateTime.Now.Year - Mason Site. Website by George Tang</p>
+                <br />
+            </div>
+            <hr />
+            <div class="col-sm-12 col-xs-12 text-center blacked">
+                <p>
+                    @Html.ActionLink("Home", "Index", "Home") &emsp;|&emsp;
+                    @Html.ActionLink("About", "About", "Home") &emsp;|&emsp;
+                    @Html.ActionLink("Contact", "Contact", "Home") &emsp;|&emsp;
+                    @Html.ActionLink("Apply", "Index", "Students/Create")
+                </p><br />
+            </div>
+        </footer>
+    </div>
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+</body>
+</html>
